@@ -12,7 +12,8 @@ for pair in pairs:
     low2,high2 = range2.split('-')
     low2,high2 = int(low2),int(high2)
 
-    if (low1 <= low2 <= high1) or (low1 <= high2 <= high1) or (low2 <= low1 <= high2) or (low2 <= high1 <= high2):
+    if max(low1,low2) <= min(high1,high2):
         score += 1
+
 
 print(score)
